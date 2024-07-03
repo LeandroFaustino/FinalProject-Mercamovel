@@ -1,0 +1,250 @@
+body {
+    height: 100vh;
+    background-color: #48dd54;
+    align-content: center;
+    display: flex;
+    position: relative;
+}
+
+#input{
+    background-color: #fad808;
+    border-color: #1a614f;
+    border-radius: 7px;
+    border-width: 3px;
+    box-shadow: 5px 5px 0px #1a614f;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: #1a614f;
+}
+
+.btn{
+    color: #1a614f;
+    background-color: #fad808;
+    border-radius: 7px;
+    border-width: 3px;
+    border-color: #1a614f;
+    box-shadow: 2px 2px 0px #1a614f;
+    font-family: "Passion One", sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+label{
+    font-family: "Passion One", sans-serif;
+    font-size: 1.5rem;
+    color: #1a614f;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+#selection {
+    height: 26vh;
+    width: 100vw;
+    
+}
+
+#caixa {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    align-content: center;
+}
+
+#caixa img {
+    width: 12vh;
+    height: 12vh;
+    margin-left: 3vh;
+}
+
+#caixa h2 {
+    position: absolute;
+    margin-top: -5vh;
+    font-family: "Passion One", sans-serif;
+    font-weight: 500;
+    font-size: 5vh;
+    color: #2C7865;
+    word-spacing: 1vh;
+}
+
+#scrollSection {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 25vh;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+#scrollSection2 {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 25vh;
+    right: -100vw;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+.slide-out-left {
+    animation: slideOutLeft 1s forwards;
+    transition: transform 1s ease; /* Add transition for smooth animation */
+}
+
+.regresso {
+    animation: slideOutRight;
+    animation-duration: 1s;
+    transition: transform 3s ease-in-out;
+}
+
+@keyframes slideOutRight {
+    from {
+       transform: translate(-100vw);
+    }
+    to {
+        transform: translate(0vw);
+        
+    }
+}
+
+
+@media (min-width: 360px) and (max-width: 415px) {
+    #selection {
+        height: 20vh;
+    }
+
+    #categorias {
+        height: fit-content;
+        padding-left: 10vw;
+        font-family: "Passion One", sans-serif;
+        font-size: 5vh;
+        color: #1a614f;
+    }
+
+   
+    #categorias hr {
+        width: 65vw;
+        border-width: 2px;
+        border-style: solid;
+        color: #1a614f;
+    }
+
+    #caixa {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+        align-content: center;
+    }
+
+    #caixa img {
+        width: 10vh;
+        height: 10vh;
+        margin-left: 2vh;
+    }
+
+    #caixa h2 {
+        position: absolute;
+        margin-top: -2vh;
+        font-family: "Passion One", sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        color: rgba(44, 120, 101, 1);
+        word-spacing: 1vh;
+        line-height: 3vh;
+        letter-spacing: 0.01vw;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 768px) {
+    #selection {
+        height: 20vh;
+    }
+
+    #caixa {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+        align-content: center;
+        width: 30vw;
+    }
+
+    #caixa img {
+        width: 10vh;
+        height: 10vh;
+        margin-left: 2vh;
+    }
+
+    #caixa h2 {
+        position: absolute;
+        margin-top: -2vh;
+        font-family: "Passion One", sans-serif;
+        font-weight: 300;
+        font-size: 2.8rem;
+        color: #2C7865;
+        word-spacing: 1vh;
+        line-height: 3vh;
+        letter-spacing: 0.01vw;
+        margin-left: 1vw;
+    }
+
+    #categorias {
+        height: fit-content;
+        padding-left: 10vw;
+        font-family: "Passion One", sans-serif;
+        font-size: 5vh;
+        color: #1a614f;
+    }
+
+    #categorias hr {
+        width: 65vw;
+        border-width: 2px;
+        border-style: solid;
+        color: #1a614f;
+    }
+
+    
+}
+
+#butaoMenu{
+    width: 70vw;   
+    height: 5vh;
+    border-radius: 7px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #1a614f;
+    background-color:#fad808;
+    box-shadow: 5px 5px 0px #1a614f;
+    font-family: "Passion One", sans-serif;
+    font-size: 1.5rem;
+    font-weight:100;
+    color: #1a614f;
+}
+ 
+#linkVendedor{
+    color: #258d73;
+    font-family: "Passion One", sans-serif;
+    font-size: 1.5rem;
+    font-weight:100;
+}
+
+
+
+
