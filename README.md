@@ -5,5 +5,5 @@ The idea is to help the users to find the best prices for each type of product a
 The project is focused on being responsive to mobile devices like 360x800, 390x844, 414x896, 375x667, 412x732.
 This project features:
     - Front-End in Javascript,HTML,CSS and Bootstrap
-    - Back-End in PHP,SQL, MySQLWorkbench
+    - Back-End in PHP,SQL, MySQLWorkbench(to be developed)
     - UX and UI design skills aquired from my previous Multimedia course.
