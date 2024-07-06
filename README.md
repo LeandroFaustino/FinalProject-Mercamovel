@@ -6,4 +6,4 @@ The project is focused on being responsive to mobile devices like 360x800, 390x8
 This project features:
     - Front-End in Javascript,HTML,CSS and Bootstrap
     - Back-End in PHP,SQL, MySQLWorkbench(to be developed)
-    - UX and UI design skills aquired from my previous Multimedia course.
+    - UX UI design and Visual Identity skills aquired from my previous Multimedia course.
