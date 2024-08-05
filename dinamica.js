@@ -10,8 +10,7 @@ function deslize() {
 }
 
   function deslize2() {
-   
-   
+    
    var target1 = document.getElementById('scrollSection')
    var target2 = document.getElementById('scrollSection2')
       
@@ -20,8 +19,6 @@ function deslize() {
       target1.classList.add('regresso')
       target2.classList.add('regresso')
   
-
-    
-
   }
+ 
  
