@@ -7,31 +7,47 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="estilos.css" rel="stylesheet">
+    <link href="estilosCategorias.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="dinamica.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="dinamicaCategoria.js"></script>
   </head>
   
   <body>
-    <div class="container-fluid overflow-hidden">
+    <div class="row divListaProdutos" id="divListaProdutos">
+      <div class="col-8" id="listaCategorias">
+          <button onclick="FecharProdutos()"><</button>
+          
+          <h1>Produtos</h1>
+          
+          <form id="DivFormProdutos" action="buscarProdutos.php" method="POST">
+            
+          </form> 
+          <input type="hidden" id="produto" name="produto">
+      </div>
+    </div> 
+
+    <div id= "category-section" class="container-fluid overflow-hidden">
       <div id="scrollSection">
         <div class="row" id="categorias"><h1>CATEGORIAS</h1><hr></div>
         <div class="row" id="selection" style="display: flex; justify-content: center;">
           <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808;">
-            <h2>TALHO</h2><img src="img/meat.png">
+            <h2>CARNES</h2><a href="#"><img id="Carnes" src="img/meat.png"></a>
           </div>
           <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808;">
-            <h2>HORTO<br>&FRUTAS</h2><img src="img/vegetable.png">
+            <h2>HORTI-<br>CULAS</h2><a href="#"><img id="Horticulas" src="img/vegetable.png"></a>
           </div>
         </div>
         <div class="row" id="selection" style="display: flex; justify-content: center;">
-          <div class="col-4 my-2 mx-2 " id="caixa" style="background-color: #fad808;">
-            <h2>PADARIA</h2><img src="img/bread.png">
+          <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808;">
+            <h2>PEIXE</h2><a href="#"><img id="Peixe" src="img/fish.png"></a>
           </div>
           <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808">
-            <h2>FRUTOS<br>SECOS</h2><img src="img/peanut.png">
+            <h2>FRUTA</h2><a href="#"><img id="Fruta" src="img/fruit.png"></a>
           </div>
         </div>
         <div class="row" style="display: flex; justify-content: center; height: 5vh;">
@@ -46,18 +62,16 @@
         
         <div class="row" id="selection" style="display: flex; justify-content: center;">
           <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808;">
-            <h2>TALHO</h2><img src="img/meat.png">
+            <h2>FRUTOS <br> SECOS </h2><a href="#"><img id="Frutos Secos" src="img/peanut.png"></a>
           </div>
-          <div class="col-4 my-2 mx-2" id="caixa" style="background-color: #fad808;">
-            <h2>HORTO<br>&FRUTAS</h2><img src="img/vegetable.png">
+
+          <div class="col-4 my-2 mx-2 " id="caixa" style="background-color: #fad808;">
+            <h2>RAÇÃO</h2><a href="#"><img id="Ração" src="img/dog-treat.png"></a>
           </div>
+
         </div>
         
-        <div class="row" id="selection" style="display: flex; justify-content: center;">
-          <div class="col-4 my-2 mx-2 " id="caixa" style="background-color: #fad808;">
-            <h2>PADARIA</h2><img src="img/bread.png">
-          </div>
-        </div>
+        
         <div class="row" style="display: flex; justify-content: center; height: 5vh;">
           <div class="col-3 h-100" style="background-color: #fad808; align-content: center;">
             <button onclick="deslize2()"> back </button>
@@ -69,6 +83,12 @@
     
     </div>
   
+
+    
+
+    
+    
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>

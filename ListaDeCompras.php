@@ -31,7 +31,7 @@
         </div>
         <div class="row" style="display: flex; height: 6vh; padding-left: 3vw;">
             <div class="col-12">
-                <button class="adicionarItem" onclick="MostrarCategoria()" >ADICIONAR ITEM</button>
+                <button class="adicionarItem" onclick="MostrarCategoria()" >ADICIONAR</button>
             </div>
         </div>
         
@@ -41,12 +41,13 @@
             <!-- Inicia vazio, div onde aparece items adicionados-->
                      
         </table>
+
         <div id="botaoCalcular"></div>
             
         <form id="formCalcular" action="calcularLista.php" method="POST">
             <input type="hidden" id="listaData" name="listaData">
-           
-        </form>    
+            
+        </form>         
         
         
         <div class="row divLista" id="divLista">
@@ -78,11 +79,11 @@
          
          <div class="row divListaProdutos" id="divListaProdutos">
             <div class="col-8" id="listaCategorias">
-            <button onclick="FecharProdutos()"><</button>
-            
-            <h1>Produtos</h1>
-            
-            <form id="DivFormProdutos"></form> 
+                <button onclick="FecharProdutos()"><</button>
+                
+                <h1>Produtos</h1>
+                
+                <form id="DivFormProdutos"></form> 
             
             </div>
         </div>

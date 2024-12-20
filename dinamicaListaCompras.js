@@ -1,5 +1,5 @@
 
-/* Variaveis globais */ 
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (data.length > 0) {
             
-            
             data.forEach(item => {
                 const label = document.createElement('label');
                 const button = document.createElement('button');
@@ -48,32 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
-        /*function displayResults(data) {
-            const resultadoDiv = document.getElementById('DivFormProdutos');
-            resultadoDiv.innerHTML = '';
-            
-            if (data.length > 0) {
-                
-                
-                data.forEach(item => {
-                    const input = document.createElement('input');
-                    const label = document.createElement('label');
-                    const br = document.createElement('br');
-                    input.type = "radio";
-                    input.value = item.NomeProduto;
-                    input.name = "nomeProduto";
-                    label.for = "produtos"
-                    label.textContent = item.NomeProduto;
-                    resultadoDiv.appendChild(label);
-                    resultadoDiv.appendChild(input);
-                    resultadoDiv.appendChild(br);
-                });
-                
-            } else {
-                resultadoDiv.textContent = 'Nenhum produto encontrado.';
-            }
-        }*/    
 });
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -97,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function(){
         xhr.send();
     })
 
-    function InputPeso(data) {
+    function InputPeso(dados) {
         const introducaoPeso = document.getElementById('introducaoPeso');
         const lista = document.getElementById('lista');
         introducaoPeso.innerHTML = '';
         
-        if (data.length > 0) {
+        if (dados.length > 0) {
             
-            data.forEach(item => {
+            dados.forEach(item => {
                 
                 const h1 = document.createElement('h1');
                 const input = document.createElement('input');
@@ -112,17 +85,17 @@ document.addEventListener("DOMContentLoaded", function(){
                 const h2 = document.createElement('h2');
                 const hr = document.createElement('hr');
                 const button = document.createElement('button');
-                const p = document.createElement('p')
+                const p = document.createElement('p');
  
                     h1.textContent = item.nomeTipo;
                     h2.textContent = item.NomeProduto;
                     input.type="number";
                     input.id="peso";
-                    input.placeholder="0.000"
-                    input.step="0.001"
-                    label.textContent="Kg/Gr:"      
-                    button.type = "submit"
-                    button.name = item.NomeProduto
+                    input.placeholder="0.000";
+                    input.step="0.001";
+                    label.textContent="Kg/Gr:";      
+                    button.type = "submit";
+                    button.name = item.NomeProduto;
                     button.textContent = "Adicionar";
                     
                     input.addEventListener('input', function() {
@@ -152,8 +125,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const introducaoPeso = document.getElementById('DivFormProdutos')
 
     introducaoPeso.addEventListener('submit', function(event){
-        MostrarInputPeso();
-        
+        MostrarInputPeso();  
     })
 
     function MostrarInputPeso() {
@@ -168,70 +140,68 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 })
 
-document.addEventListener("DOMContentLoaded", function(){
-    const envio = document.getElementById('introducaoPeso')
+document.addEventListener("DOMContentLoaded", function () {
+    const envio = document.getElementById('introducaoPeso');
+    let buttonCalcular; 
 
-    envio.addEventListener('submit', function(event){
+    envio.addEventListener('submit', function (event) {
         event.preventDefault();
         const itemAdicionar = event.submitter.name;
         const itemPeso = event.submitter.id;
         Adicionar(itemAdicionar, itemPeso);
-        /*ArrayCollect(itemAdicionar, itemPeso);*/
-    })
+    });
 
     function Adicionar(item, peso) {
-            const tr = document.createElement('tr')
-            const lista = document.getElementById('lista')
-            const nome = document.createElement('td')
-            const pesoItem = document.createElement('td')
-            const buttonSlot = document.createElement('td')
-            const button = document.createElement('button')
-            const buttonCalcular = document.createElement('button')
-            const verificarButton = document.getElementById('calcular')
+        const tr = document.createElement('tr');
+        const lista = document.getElementById('lista');
+        const nome = document.createElement('td');
+        const pesoItem = document.createElement('td');
+        const buttonSlot = document.createElement('td');
+        const button = document.createElement('button');
+        const divCalcular = document.getElementById('botaoCalcular');
 
-            nome.textContent = item;
-            pesoItem.textContent = peso;
-            tr.id=item;
-            button.id=item;
-            button.textContent = "-"
-            
-            if(!verificarButton){
-                const divCalcular=document.getElementById('botaoCalcular')
-                buttonCalcular.id="calcular"
-                buttonCalcular.textContent="CALCULAR"
-                divCalcular.appendChild(buttonCalcular)
-               
-                
-            }
+        nome.textContent = item;
+        pesoItem.textContent = peso;
+        tr.id = item;
+        button.id = item;
+        button.textContent = "-";
 
-            buttonSlot.appendChild(button)
-            tr.appendChild(nome);
-            tr.appendChild(pesoItem);
-            tr.appendChild(buttonSlot);
-            lista.appendChild(tr);
-            
-            
+        buttonSlot.appendChild(button);
+        tr.appendChild(nome);
+        tr.appendChild(pesoItem);
+        tr.appendChild(buttonSlot);
+        lista.appendChild(tr);
 
-            button.addEventListener('click', function() {
-                Remover(item);
-                
-            });
         
+        if (!buttonCalcular) {
+            buttonCalcular = document.createElement('button');
+            buttonCalcular.id = "calcular";
+            buttonCalcular.textContent = "CALCULAR";
+            divCalcular.appendChild(buttonCalcular);
+        }
+
+        
+        button.addEventListener('click', function () {
+            Remover(item);
+
+           
+            if (lista.children.length === 0 && buttonCalcular) {
+                divCalcular.removeChild(buttonCalcular);
+                buttonCalcular = null; 
+            }
+        });
     }
 
     function Remover(itemId) {
         const parentDiv = document.getElementById("lista");
         const childDiv = document.getElementById(itemId);
 
-
         if (childDiv) {
             parentDiv.removeChild(childDiv);
         }
     }
+});
 
-    
-
-})
 
 document.addEventListener("DOMContentLoaded", function(){
     const triggerCalcular = document.getElementById("botaoCalcular")
@@ -269,20 +239,12 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
 
-    
-    /*let insert = [item, peso]
-    inventario.push(insert)
-    console.log(inventario)*/
-
-
 
 function MostrarCategoria() {
     
     var target = document.getElementById('divLista');
     target.classList.remove('divLista');
-    target.classList.add('divLista2');
-   
-    
+    target.classList.add('divLista2');   
 }
 
 function MostrarProdutos() {

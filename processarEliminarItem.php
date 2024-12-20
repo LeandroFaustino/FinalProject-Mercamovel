@@ -17,28 +17,22 @@
 
     $bd_connect->set_charset("utf8mb4");
 
-    $categoria = mysqli_real_escape_string ($bd_connect, $_GET['categoriaProduto']);
+    $produto = mysqli_real_escape_string ($bd_connect, $_GET['produto']);
+    $vendedor = mysqli_real_escape_string ($bd_connect, $_GET['vendedor']);
     
-    $query="SELECT NomeProduto FROM produto WHERE nomeTipo = '$categoria'";
+    $query="DELETE FROM inventario WHERE NomeProduto = '$produto' AND IDvendedor = '$vendedor'";
     $result = $bd_connect->query($query);
-    
-    $dados = [];
 
-    if($result->num_rows>0){
-        
-        while($row = $result -> fetch_assoc()){
-            
-            $dados[] = $row; 
-        }
-        
-        echo json_encode($dados, JSON_UNESCAPED_UNICODE);
-       
-        
+    if ($result) {
+        echo json_encode(["success" => true, "message" => "Produto removido com sucesso."]);
     } else {
-        echo json_encode([]);
+        echo json_encode(["success" => false, "message" => "Erro ao remover o produto."]);
     }
+    
+    
         
-    $bd_connect->close()
+    $bd_connect->close();
+    exit;
     
     
     

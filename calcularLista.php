@@ -49,8 +49,11 @@
                 <th scope="col">Sub-Total</th>
             </tr>
         </thead>
-        <tbody>    
-        <?php for ($i = 1; $i < count($listaData); $i++): ?>
+        <tbody>
+           
+        <?php 
+        $precoFinal = 0; 
+        for ($i = 1; $i < count($listaData); $i++): ?>
                 <?php
                 $pesoSelecionado =  $listaData[$i][1];
                 $nomeProduto = $listaData[$i][0];
@@ -74,31 +77,33 @@
                          
                             
                             <?php if ($result->num_rows > 0): ?>
-                                
+
                                 <?php while($row = $result -> fetch_assoc()):?>
                                     
                                   <?php $precoKg = number_format($row['preco'], 2, '.', ''); ?>
                                   <?php  $precoTotal = number_format(($precoKg * $pesoSelecionado), 2, '.', ''); ?>
-                                   
+                                  
                                     <tr>
                                         <td id="tdInfo"><?php echo $row['NomeProduto'];?></td>
                                         <td id="tdNomeVendedor"><?php echo $row['nomeVendedor'];?></td>
                                         <td id="tdPrecoKg"><?php echo $precoKg;?></td>
                                         <td id="tdPreco"><?php echo $precoTotal?></td>
                                     </tr>
-                                
-                                <?php endwhile ?>
                                     
+                                    <?php $precoFinal += $precoTotal; ?>
+
+                                <?php endwhile ?> 
                             <?php endif; ?>
                             
         <?php endfor; ?>    
-    
+        <tr>
+            <td><h3>Total: </h3></td>
+            <td><h3><?php echo $precoFinal?> € </h3></td>              
+        </tr>
         </tbody>                                
    
-   
-
     </table>
-
+    
     </div>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -1,3 +1,55 @@
+*{
+    font-family: Outfit;
+}
+body {
+    height: 100vh;
+    background-color: #48dd54;
+    align-content: center;
+    display: flex;
+    position: relative;
+}
+
+a{
+    color:#1a614f;
+}
+
+hr{
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-width: 1px;
+    color: #1a614f;
+    opacity: 1;
+    margin-bottom: 5px;
+    width: 60%;
+}
+
+label{
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    color: #1a614f;
+}
+
+.titulo{
+    height: 15vh;
+    width: 80vw;
+    display: flex;
+    flex-direction:column;
+    color:#1a614f;
+    gap: 0px;
+    justify-content:flex-end;
+}
+
+h3 {
+    color:#2C7865;
+    padding: 0px;
+    margin: 0px;
+}
+p{
+    padding: 0px;
+    margin: 0px;
+}
+
 #listaCategorias {
     background-color: #fad808;
     position: relative;
@@ -29,8 +81,9 @@
 
 .divLista {
     opacity: 0;
+    z-index: -1;
     position: absolute;
-    left: 120vw;
+    left: 2vw;
     top: 0vh;
     display: flex;
     height: 100vh;
@@ -91,18 +144,21 @@
 }
 
 .adicionarItem{
-    border-top-right-radius: 0.7em;
-    border-bottom-right-radius: 0.7em;
-    border-bottom-left-radius: 0.7em;
+    position: absolute;
+    border-top-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
     border-style: none;
-    height: 5vh; 
-    width: 40vw;
-    margin-top: 1vh;
+    align-self:end;
+    height: 35px; 
+    width: 35px;
+    justify-items:center;
+    font-size: 25px;
     background-color: #fad808;
     font-family: "Outfit", sans-serif;
     font-weight: bold;
     color: #2C7865;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 h1{
     font-style: normal;
@@ -140,7 +196,8 @@ h1{
 
 #formCategoria {
     height: 50%;
-    overflow: scroll;   
+    overflow: scroll;
+    padding-bottom: 15px;
 }
 
 #formCategoria button{
@@ -207,10 +264,11 @@ h1{
     margin-bottom: 0px;
 }
 
-.selecaoPeso{
+.editar-preco{
     opacity: 0;
+    z-index: -1;
     position: absolute;
-    left: 120vw;
+    left: 2vw;
     top: 0vh;
     display: flex;
     height: 100vh;
@@ -220,7 +278,7 @@ h1{
     background-color: aquamarine;
 }
 
-.selecaoPeso2{
+.editar-preco2{
     opacity: 1;
     position: absolute;
     right: 2vw;
@@ -246,20 +304,20 @@ h1{
 }
 #lista td, th {
     color:  #2C7865;
-    text-align: left;
+    text-align: center;
     padding-right: 6vw;
     padding-left: 6vw;
     padding-bottom: 1.5vh;
   }
 
-#lista button{
+#listaVendedores button{
     display: inline-block;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 1em;
     text-align: center;
     line-height: 1;
     border: none;
-    background-color:#fad808;
+    background-color:#fad808 ;
     color: #1a614f;
     cursor: pointer;
     border-top-right-radius: 4px;
@@ -285,18 +343,27 @@ h1{
 }
 
 #listaVendedores{
+    
     display: inline-block;
     justify-items: center;
-    height: fit-content;
-    margin-top: 2vh; 
+    height: 40vh;
+    width:fit-content;
+    overflow: scroll;
+    margin-top: 1vh; 
     font-family: "Outfit", sans-serif;
     font-weight: 500;
     font-size: 1em;
-    border-spacing: 0 1vh; 
+    border-spacing: 0 5px; 
     border-collapse: separate;
-    border-bottom: #fad808; 
+    border-bottom: #A2FF2D;   
 }
 
+#listaVendedores thead th {
+    position: sticky;
+    top: 0; 
+    background-color: #48dd54;
+    margin-bottom: 5vh;
+  }
 
 #listaVendedores tr td:last-child{
     border-top-right-radius: 0.5em;
@@ -343,7 +410,7 @@ h1{
 */
 
 #listaVendedores th{
-    max-width: 22.5vw;
+    width: 20vw;
 }
 
 #tdInfo{
@@ -357,15 +424,15 @@ h1{
     text-overflow: ellipsis;
     text-align: center;
     color: #1a614f;
-    background-color: #FFF84C;
+    background-color: #A2FF2D;
 }
 
 
 #divResultadoFinal{
-
     width: 100vw;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     
