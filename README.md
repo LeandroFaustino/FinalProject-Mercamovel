@@ -1,13 +1,15 @@
-# FinalProject-Mercamovel(In Development)
-<<<<<<< HEAD
-=======
-This is my final project for the programming course I´ve completed.
->>>>>>> 7e40823b53a2fc05c080c4312e217540b44408fe
-This app concept is based on the buying experience of someone who attends fresh markets, where alot of people sell the same products with slightly different prices.
-The idea is to help the users to find the best prices for each type of product and guide them to the right vendor.
-The project is focused on being responsive to mobile devices like 360x800, 390x844, 414x896, 375x667, 412x732.
-This project features:
-    - Front-End in Javascript,HTML,CSS and Bootstrap
-    - Back-End in PHP,SQL, MySQLWorkbench
-    - AJAX Operations
-    - UX UI design and Visual Identity skills aquired from my previous Multimedia course.
+Este é o meu projeto final do curso de programação.
+
+O conceito da aplicação é baseado na experiência de compra de alguém que frequenta mercados municipais, onde muitas pessoas vendem os mesmos produtos com preços diferentes.
+A ideia é ajudar os utilizadores a encontrar os melhores preços para cada tipo de produto e guiá-los até o vendedor certo.
+O projeto é focado em ser responsivo para dispositivos móveis, como 360x800, 390x844, 414x896, 375x667, 412x732.
+
+Este projeto inclui:
+
+Front-End em Javascript, HTML, CSS e Bootstrap.
+Back-End em PHP, SQL, MySQLWorkbench.
+Operações AJAX com o servidor para uma experiência de usuário mais fluída.
+Habilidades de design UX/UI e Identidade Visual adquiridas no meu curso anterior de Multimídia.
+
+A documentação detalhada para o projeto pode ser consultada juntamento com o fluxo de utilização da aplicação em:
+https://www.figma.com/board/UUsW8dFGieTgPN4rF8S3mU/Untitled?node-id=0-1&t=2LhznXQ4R5yS6aam-1
