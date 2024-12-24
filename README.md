@@ -8,8 +8,8 @@ Este projeto inclui:
 
 Front-End em Javascript, HTML, CSS e Bootstrap.
 Back-End em PHP, SQL, MySQLWorkbench.
-Operações AJAX com o servidor para uma experiência de usuário mais fluída.
-Habilidades de design UX/UI e Identidade Visual adquiridas no meu curso anterior de Multimídia.
+Operações AJAX com o servidor para uma experiência de utilizador mais fluída.
+Habilidades de design UX/UI e Identidade Visual adquiridas no meu curso anterior de Multimedia.
 
 A documentação detalhada para o projeto pode ser consultada juntamento com o fluxo de utilização da aplicação em:
 https://www.figma.com/board/UUsW8dFGieTgPN4rF8S3mU/Untitled?node-id=0-1&t=2LhznXQ4R5yS6aam-1
