@@ -15,5 +15,8 @@ Por razões de testagem, as credenciais na tabela vendedores não estão encript
 onde o uso do bcrypt para hash das senhas seria o correto. Este detalhe é uma escolha proposital para facilitar a avaliação
 do projeto no uso das funcionalidades associadas aos vendedores.
 
+Video de funcionamento do projeto pode ser visto em:
+https://www.behance.net/gallery/216123337/Mercamovel-App
+
 A documentação detalhada para o projeto pode ser consultada juntamento com o fluxo de utilização da aplicação em:
 https://www.figma.com/board/UUsW8dFGieTgPN4rF8S3mU/Untitled?node-id=0-1&t=2LhznXQ4R5yS6aam-1
